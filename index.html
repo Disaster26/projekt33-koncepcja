@@ -74,7 +74,7 @@ background:linear-gradient(currentColor,currentColor) 0 8px/6px 1px,linear-gradi
  .top.open .menu{display:flex}
  .menu a{display:block;font-size:24px;font-weight:700;padding:14px 0;border-bottom:1px solid var(--line)}
  .menu a.on{color:var(--red)}
- .menu .btn{margin-top:28px;border:0;font-size:1rem}
+ .menu .btn{display:flex;margin-top:28px;border:0;font-size:1.1rem}
 }
 @media (min-width:900px){
  .menu{display:flex;align-items:center;gap:clamp(18px,2vw,40px);font-size:15px;font-weight:600}
@@ -88,7 +88,7 @@ background:linear-gradient(currentColor,currentColor) 0 8px/6px 1px,linear-gradi
 /* pierwszy ekran: mata z realizacjami + czerwony arkusz */
 .hero{position:relative;display:flex;flex-direction:column;min-height:calc(100svh - var(--hh));background:var(--g);overflow:hidden}
 .mata{position:relative;flex:1 1 auto;min-height:150px;overflow:hidden}
-.siatka{position:absolute;inset:0;display:grid;direction:rtl;grid-template-rows:repeat(var(--r,2),1fr);grid-auto-flow:column;grid-auto-columns:var(--t,25vh);gap:1px;background:var(--line)}
+.siatka{position:absolute;inset:0;display:grid;direction:rtl;grid-template-rows:repeat(3,33.4vw);grid-auto-flow:column;grid-auto-columns:33.4vw;align-content:start;gap:1px;background:var(--line)}
 .siatka figure{margin:0;position:relative;background:#fff}
 .siatka img{width:100%;height:100%;object-fit:cover}
 .siatka figure::after{content:"";position:absolute;right:-7px;top:-7px;width:13px;height:13px;z-index:2;background:linear-gradient(var(--ink),var(--ink)) 6px 0/1px 13px no-repeat,linear-gradient(var(--ink),var(--ink)) 0 6px/13px 1px no-repeat}
@@ -103,7 +103,8 @@ background:linear-gradient(currentColor,currentColor) 0 8px/6px 1px,linear-gradi
 @media (min-width:900px){
  .hero{display:grid;align-items:center;min-height:max(600px,calc(100svh - var(--hh)))}
  .mata{position:absolute;inset:0;min-height:0}
- .arkusz-w{margin:0;padding:48px 0;width:var(--w);margin-inline:auto}
+ .siatka{grid-template-rows:repeat(2,1fr);grid-auto-columns:calc(max(600px,100svh - var(--hh)) / 2)}
+ .arkusz-w{margin:0;padding:40px 0;width:var(--w);margin-inline:auto}
  .arkusz{width:min(46%,760px);padding:clamp(40px,3.4vw,68px) clamp(36px,3.4vw,68px);--o:18px;--l:12px}
  .arkusz h1{font-size:clamp(38px,3.4vw,68px)}
  .arkusz .lead{font-size:clamp(17px,1.05vw,21px);margin-top:20px;max-width:34em}
@@ -245,7 +246,7 @@ background:linear-gradient(currentColor,currentColor) 0 8px/6px 1px,linear-gradi
 
 <header class="top" id="top">
  <div class="wrap">
-  <a class="logo" href="#start" aria-label="Projekt 33 Studio Reklamy - strona główna"><i></i><b>PROJEKT</b><strong>33</strong></a>
+  <a class="logo" href="#start"><i></i><b>PROJEKT</b><strong>33</strong></a>
   <div class="top-r">
    <a class="tel-top mobil" href="tel:+48530066066">530 066 066</a>
    <button class="burger" id="burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="menu"><span></span></button>
@@ -265,21 +266,20 @@ background:linear-gradient(currentColor,currentColor) 0 8px/6px 1px,linear-gradi
 <section class="hero" id="start">
  <div class="mata" aria-hidden="true">
   <div class="siatka">
-   <figure><img src="img/asanka-640.webp" width="640" height="640" alt=""></figure>
-   <figure><img src="img/natural-way-etykiety-640.webp" width="640" height="640" alt=""></figure>
-   <figure><img src="img/hertz-prezentacja-640.webp" width="640" height="640" alt=""></figure>
-   <figure><img src="img/natural-way-www-640.webp" width="640" height="640" alt=""></figure>
-   <figure><img src="img/p33-identyfikacja-640.webp" width="640" height="640" alt=""></figure>
-   <figure><img src="img/asanka-640.webp" width="640" height="640" alt=""></figure>
-   <figure><img src="img/natural-way-www-640.webp" width="640" height="640" alt="" loading="lazy"></figure>
-   <figure><img src="img/hertz-prezentacja-640.webp" width="640" height="640" alt="" loading="lazy"></figure>
-   <figure><img src="img/natural-way-etykiety-640.webp" width="640" height="640" alt="" loading="lazy"></figure>
-   <figure><img src="img/p33-identyfikacja-640.webp" width="640" height="640" alt="" loading="lazy"></figure>
-   <figure><img src="img/hertz-prezentacja-640.webp" width="640" height="640" alt="" loading="lazy"></figure>
-   <figure><img src="img/asanka-640.webp" width="640" height="640" alt="" loading="lazy"></figure>
+   <figure><img src="img/asanka-640.webp" srcset="img/asanka-400.webp 400w, img/asanka-640.webp 640w" sizes="(min-width:900px) 50vh, 34vw" width="640" height="640" alt=""></figure>
+   <figure><img src="img/natural-way-etykiety-640.webp" srcset="img/natural-way-etykiety-400.webp 400w, img/natural-way-etykiety-640.webp 640w" sizes="(min-width:900px) 50vh, 34vw" width="640" height="640" alt=""></figure>
+   <figure><img src="img/hertz-prezentacja-640.webp" srcset="img/hertz-prezentacja-400.webp 400w, img/hertz-prezentacja-640.webp 640w" sizes="(min-width:900px) 50vh, 34vw" width="640" height="640" alt=""></figure>
+   <figure><img src="img/natural-way-www-640.webp" srcset="img/natural-way-www-400.webp 400w, img/natural-way-www-640.webp 640w" sizes="(min-width:900px) 50vh, 34vw" width="640" height="640" alt=""></figure>
+   <figure><img src="img/p33-identyfikacja-640.webp" srcset="img/p33-identyfikacja-400.webp 400w, img/p33-identyfikacja-640.webp 640w" sizes="(min-width:900px) 50vh, 34vw" width="640" height="640" alt=""></figure>
+   <figure><img src="img/asanka-640.webp" srcset="img/asanka-400.webp 400w, img/asanka-640.webp 640w" sizes="(min-width:900px) 50vh, 34vw" width="640" height="640" alt=""></figure>
+   <figure><img src="img/hertz-prezentacja-640.webp" srcset="img/hertz-prezentacja-400.webp 400w, img/hertz-prezentacja-640.webp 640w" sizes="(min-width:900px) 50vh, 34vw" width="640" height="640" alt="" loading="lazy"></figure>
+   <figure><img src="img/natural-way-www-640.webp" srcset="img/natural-way-www-400.webp 400w, img/natural-way-www-640.webp 640w" sizes="(min-width:900px) 50vh, 34vw" width="640" height="640" alt="" loading="lazy"></figure>
+   <figure><img src="img/natural-way-etykiety-640.webp" srcset="img/natural-way-etykiety-400.webp 400w, img/natural-way-etykiety-640.webp 640w" sizes="(min-width:900px) 50vh, 34vw" width="640" height="640" alt="" loading="lazy"></figure>
+   <figure><img src="img/p33-identyfikacja-640.webp" srcset="img/p33-identyfikacja-400.webp 400w, img/p33-identyfikacja-640.webp 640w" sizes="(min-width:900px) 50vh, 34vw" width="640" height="640" alt="" loading="lazy"></figure>
+   <figure><img src="img/asanka-640.webp" srcset="img/asanka-400.webp 400w, img/asanka-640.webp 640w" sizes="(min-width:900px) 50vh, 34vw" width="640" height="640" alt="" loading="lazy"></figure>
+   <figure><img src="img/hertz-prezentacja-640.webp" srcset="img/hertz-prezentacja-400.webp 400w, img/hertz-prezentacja-640.webp 640w" sizes="(min-width:900px) 50vh, 34vw" width="640" height="640" alt="" loading="lazy"></figure>
   </div>
  </div>
- <script>(function(){var m=document.currentScript.previousElementSibling,s=m.firstElementChild;function f(){var h=m.clientHeight,r=h<240?1:2;s.style.setProperty('--r',r);s.style.setProperty('--t',Math.ceil(h/r)+'px')}f();addEventListener('resize',f);if(window.ResizeObserver)new ResizeObserver(f).observe(m)})()</script>
  <div class="arkusz-w">
   <div class="arkusz ciecie">
    <h1>Studio reklamy w&nbsp;Podzamczu - od pomysłu, przez projekt, po gotowy wydruk</h1>
@@ -424,7 +424,7 @@ background:linear-gradient(currentColor,currentColor) 0 8px/6px 1px,linear-gradi
 
 <footer class="stopka">
  <div class="wrap">
-  <div><a class="logo" href="#start" aria-label="Projekt 33 - do góry"><i></i><b>PROJEKT</b><strong>33</strong></a><p>Studio reklamy: grafika, druk, reklama.</p></div>
+  <div><a class="logo" href="#start"><i></i><b>PROJEKT</b><strong>33</strong></a><p>Studio reklamy: grafika, druk, reklama.</p></div>
   <div><p>ul. Morusy 33<br>42-440 Podzamcze<br>NIP 649 211 51 94</p></div>
   <div><p><a href="tel:+48530066066">530 066 066</a><br><a href="mailto:biuro@projekt33.pl">biuro@projekt33.pl</a></p></div>
   <div class="dol"><span>© <span id="rok">2026</span> Projekt 33 Studio Reklamy</span><a class="wylinka-badge" href="https://wylinka.pl/?utm_source=projekt33.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
