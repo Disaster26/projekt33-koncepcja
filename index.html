@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Studio reklamy Podzamcze - grafika, druk, reklama | Projekt 33</title>
+<meta name="description" content="Projekt 33 Studio Reklamy z Podzamcza: logo i identyfikacja wizualna, projekty graficzne, druk i materiały reklamowe, kalendarze firmowe. Anna Kula, tel. 530 066 066.">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="font" type="font/woff2" href="fonts/mont-rdzen.woff2" crossorigin>
+<style>
+@font-face{font-family:Mont;src:url(fonts/mont-rdzen.woff2) format("woff2");font-weight:300 800;font-display:swap;unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B7,U+00BB,U+00D3,U+00D7,U+00F3,U+2013,U+2019,U+201D,U+201E,U+2026,U+2192}
+@font-face{font-family:Mont;src:url(fonts/mont-pl.woff2) format("woff2");font-weight:300 800;font-display:swap;unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:"Mont fb";src:local("Arial");size-adjust:112%;ascent-override:86%;descent-override:22%}
+:root{--red:#e51a48;--red2:#c8113b;--ink:#1d1d1b;--mut:#55585f;--g:#eef0f3;--line:#d6dae1;--hh:60px;--w:min(calc(100vw - 32px),1720px)}
+@media (min-width:900px){:root{--hh:80px;--w:min(92vw,1720px)}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--hh);-webkit-text-size-adjust:100%}
+body{margin:0;font-family:Mont,"Mont fb",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:clamp(16px,.18vw + 15px,19px);line-height:1.65;color:var(--ink);background:#fff;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{margin:0;line-height:1.12;letter-spacing:-.015em}
+h2{font-size:clamp(28px,2.7vw,54px);font-weight:700}
+h3{font-size:clamp(18px,1.15vw,23px);font-weight:700;line-height:1.25}
+p{margin:0}
+.wrap{width:var(--w);margin:0 auto}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:8px;z-index:99;background:#fff;padding:8px 12px}
+
+/* Motyw: znaczniki cięcia z arkusza drukarskiego (jak na planszach Projekt 33) */
+.ciecie{position:relative;--o:16px;--l:10px;--cm:var(--ink)}
+.ciecie::before{content:"";position:absolute;inset:calc(var(--o) * -1);pointer-events:none;
+background:
+linear-gradient(var(--cm),var(--cm)) 0 calc(var(--o) - 1px)/var(--l) 1px,
+linear-gradient(var(--cm),var(--cm)) calc(var(--o) - 1px) 0/1px var(--l),
+linear-gradient(var(--cm),var(--cm)) 100% calc(var(--o) - 1px)/var(--l) 1px,
+linear-gradient(var(--cm),var(--cm)) calc(100% - var(--o) + 1px) 0/1px var(--l),
+linear-gradient(var(--cm),var(--cm)) 0 calc(100% - var(--o) + 1px)/var(--l) 1px,
+linear-gradient(var(--cm),var(--cm)) calc(var(--o) - 1px) 100%/1px var(--l),
+linear-gradient(var(--cm),var(--cm)) 100% calc(100% - var(--o) + 1px)/var(--l) 1px,
+linear-gradient(var(--cm),var(--cm)) calc(100% - var(--o) + 1px) 100%/1px var(--l);
+background-repeat:no-repeat}
+
+/* przycisk: ostry prostokat, na hover pojawiaja sie znaczniki ciecia */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:56px;padding:0 30px;background:var(--red);color:#fff;font:700 1rem/1 Mont,"Mont fb",Arial,sans-serif;letter-spacing:.01em;text-decoration:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background .15s}
+.btn::before{content:"";position:absolute;inset:-9px;pointer-events:none;opacity:0;transition:opacity .15s,inset .2s;
+background:linear-gradient(currentColor,currentColor) 0 8px/6px 1px,linear-gradient(currentColor,currentColor) 8px 0/1px 6px,linear-gradient(currentColor,currentColor) 100% 8px/6px 1px,linear-gradient(currentColor,currentColor) calc(100% - 8px) 0/1px 6px,linear-gradient(currentColor,currentColor) 0 calc(100% - 8px)/6px 1px,linear-gradient(currentColor,currentColor) 8px 100%/1px 6px,linear-gradient(currentColor,currentColor) 100% calc(100% - 8px)/6px 1px,linear-gradient(currentColor,currentColor) calc(100% - 8px) 100%/1px 6px;background-repeat:no-repeat;color:var(--ink)}
+.btn:hover{background:var(--red2)}
+.btn:hover::before,.btn:focus-visible::before{opacity:1}
+.btn:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.btn.bia{background:#fff;color:var(--ink)}.btn.bia::before{color:#fff}.btn.bia:hover{background:#f3f4f6}
+.btn .s{display:inline-block;width:18px;height:2px;background:currentColor;position:relative}
+.btn .s::after{content:"";position:absolute;right:0;top:-4px;width:8px;height:8px;border:solid currentColor;border-width:2px 2px 0 0;transform:rotate(45deg);transform-origin:center}
+
+/* naglowek */
+.top{position:sticky;top:0;z-index:50;height:var(--hh);background:#fff;border-bottom:1px solid transparent;transition:border-color .2s}
+.top.sc{border-bottom-color:var(--line)}
+.top .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:inline-flex;flex-direction:column;text-decoration:none;color:var(--ink);line-height:1;padding:6px 0}
+.logo i{display:block;width:16px;height:2px;background:var(--ink);margin-bottom:5px}
+.logo b{font-weight:400;font-size:17px;letter-spacing:.06em}
+.logo strong{font-weight:800;font-size:19px;letter-spacing:.02em;margin-top:2px}
+@media (min-width:900px){.logo i{width:20px;height:3px;margin-bottom:6px}.logo b{font-size:21px}.logo strong{font-size:23px}}
+.menu{display:none}
+.menu a{text-decoration:none}
+.tel-top{font-weight:700;font-size:15px;text-decoration:none;padding:12px 4px;white-space:nowrap}
+.burger{width:48px;height:48px;margin-right:-10px;border:0;background:none;cursor:pointer;position:relative;color:var(--ink)}
+.burger span,.burger span::before{position:absolute;left:12px;width:24px;height:2px;background:currentColor;transition:transform .2s}
+.burger span{top:20px}.burger span::before{content:"";left:0;top:7px;width:16px}
+.top.open .burger span{transform:translateY(3.5px) rotate(45deg)}.top.open .burger span::before{transform:translateY(-7px) rotate(-90deg);width:24px}
+.top-r{display:flex;align-items:center;gap:8px}
+@media (max-width:899px){
+ .menu{position:fixed;left:0;right:0;top:var(--hh);bottom:0;background:#fff;padding:24px 16px 32px;flex-direction:column;overflow:auto;border-top:1px solid var(--line)}
+ .top.open .menu{display:flex}
+ .menu a{display:block;font-size:24px;font-weight:700;padding:14px 0;border-bottom:1px solid var(--line)}
+ .menu a.on{color:var(--red)}
+ .menu .btn{margin-top:28px;border:0;font-size:1rem}
+}
+@media (min-width:900px){
+ .menu{display:flex;align-items:center;gap:clamp(18px,2vw,40px);font-size:15px;font-weight:600}
+ .menu a:not(.btn){padding:10px 0;position:relative}
+ .menu a:not(.btn)::after{content:"";position:absolute;left:0;bottom:4px;width:0;height:2px;background:var(--red);transition:width .2s}
+ .menu a:not(.btn):hover::after,.menu a.on::after{width:100%}
+ .menu .btn{min-height:46px;padding:0 22px;font-size:15px}
+ .burger,.tel-top.mobil{display:none}
+}
+
+/* pierwszy ekran: mata z realizacjami + czerwony arkusz */
+.hero{position:relative;display:flex;flex-direction:column;min-height:calc(100svh - var(--hh));background:var(--g);overflow:hidden}
+.mata{position:relative;flex:1 1 auto;min-height:150px;overflow:hidden}
+.siatka{position:absolute;inset:0;display:grid;direction:rtl;grid-template-rows:repeat(var(--r,2),1fr);grid-auto-flow:column;grid-auto-columns:var(--t,25vh);gap:1px;background:var(--line)}
+.siatka figure{margin:0;position:relative;background:#fff}
+.siatka img{width:100%;height:100%;object-fit:cover}
+.siatka figure::after{content:"";position:absolute;right:-7px;top:-7px;width:13px;height:13px;z-index:2;background:linear-gradient(var(--ink),var(--ink)) 6px 0/1px 13px no-repeat,linear-gradient(var(--ink),var(--ink)) 0 6px/13px 1px no-repeat}
+.arkusz-w{position:relative;z-index:3;padding:0 16px 16px;margin-top:-34px}
+.arkusz{background:var(--red);color:#fff;padding:26px 22px 26px;--o:11px;--l:7px}
+.arkusz h1{font-size:clamp(27px,7.4vw,34px);font-weight:700;line-height:1.1}
+.arkusz .lead{margin-top:12px;font-size:16px;line-height:1.55;color:#fff}
+.arkusz .akcje{margin-top:24px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px}
+.arkusz .tel{font-weight:700;font-size:17px;text-decoration:none;white-space:nowrap;border-bottom:1px solid rgba(255,255,255,.6);padding:6px 0 3px}
+.arkusz .gdzie{margin-top:18px;font-size:14px;color:#fff;opacity:.92}
+@media (max-height:700px) and (max-width:899px){.arkusz{padding:20px 18px}.arkusz .lead{font-size:15px;margin-top:10px}.arkusz .akcje{margin-top:24px}.arkusz .gdzie{display:none}}
+@media (min-width:900px){
+ .hero{display:grid;align-items:center;min-height:max(600px,calc(100svh - var(--hh)))}
+ .mata{position:absolute;inset:0;min-height:0}
+ .arkusz-w{margin:0;padding:48px 0;width:var(--w);margin-inline:auto}
+ .arkusz{width:min(46%,760px);padding:clamp(40px,3.4vw,68px) clamp(36px,3.4vw,68px);--o:18px;--l:12px}
+ .arkusz h1{font-size:clamp(38px,3.4vw,68px)}
+ .arkusz .lead{font-size:clamp(17px,1.05vw,21px);margin-top:20px;max-width:34em}
+ .arkusz .akcje{margin-top:36px}
+ .arkusz .tel{font-size:19px}
+ .arkusz .gdzie{margin-top:30px;font-size:15px}
+}
+
+/* sekcje */
+.sek{padding:clamp(64px,7vw,130px) 0}
+.sek.sz{background:var(--g)}
+.glowa{display:grid;gap:14px;margin-bottom:clamp(32px,3.6vw,64px)}
+.glowa p{color:var(--mut);max-width:40em}
+@media (min-width:900px){.glowa{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:end;gap:40px}}
+
+/* oferta: siatka jak na macie do ciecia, z krzyzykami w narozach */
+.oferta{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line)}
+.oferta article{position:relative;padding:28px 0 30px;border-bottom:1px solid var(--line)}
+.oferta article::before{content:"";display:block;width:12px;height:12px;background:var(--red);margin-bottom:18px}
+.oferta p{margin-top:10px;color:var(--mut)}
+.oferta .np{margin-top:14px;font-size:.9em;color:var(--ink)}
+@media (min-width:700px){.oferta{grid-template-columns:repeat(2,1fr)}.oferta article{padding:34px 34px 38px 0}.oferta article:nth-child(2n){padding-left:34px;border-left:1px solid var(--line)}}
+@media (min-width:1200px){.oferta{grid-template-columns:repeat(3,1fr)}.oferta article,.oferta article:nth-child(2n){padding:42px 40px 46px;border-left:1px solid var(--line)}.oferta article:nth-child(3n+1){border-left:0;padding-left:0}
+ .oferta article::after{content:"";position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;background:linear-gradient(var(--ink),var(--ink)) 6px 0/1px 13px no-repeat,linear-gradient(var(--ink),var(--ink)) 0 6px/13px 1px no-repeat}
+ .oferta article:nth-child(3n+1)::after{display:none}}
+
+/* realizacje: tor przesuwany palcem i mysza */
+.tor{display:grid;grid-auto-flow:column;grid-auto-columns:min(78vw,380px);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:2px 0 6px;cursor:grab}
+.tor::-webkit-scrollbar{display:none}
+.tor.drag{cursor:grabbing;scroll-snap-type:none}
+@media (min-width:900px){.tor{grid-auto-columns:calc((100% - 3 * 24px) / 4);gap:24px}}
+@media (min-width:1800px){.tor{grid-auto-columns:calc((100% - 4 * 24px) / 5)}}
+.tor figure{margin:0;scroll-snap-align:start;background:#fff}
+.tor button{display:block;width:100%;padding:0;border:0;background:#fff;cursor:zoom-in}
+.tor img{width:100%;aspect-ratio:1;object-fit:cover}
+.tor figcaption{padding:18px 20px 22px;border-top:1px solid var(--line)}
+.tor figcaption b{display:block;font-size:1.05em}
+.tor figcaption span{display:block;margin-top:6px;color:var(--mut);font-size:.92em;line-height:1.5}
+.nav-tor{display:flex;gap:10px;margin-top:22px}
+.nav-tor button{width:52px;height:52px;border:1px solid var(--ink);background:#fff;cursor:pointer;display:grid;place-items:center;color:var(--ink)}
+.nav-tor button:disabled{opacity:.3;cursor:default}
+.nav-tor svg{width:22px;height:22px}
+.nav-tor[hidden]{display:none}
+
+/* jak pracujemy: mocna sekcja w czerwieni z logo */
+.mocna{background:var(--red);color:#fff}
+.mocna .glowa p{color:#fff}
+.zasady{display:grid;gap:0;border-top:1px solid rgba(255,255,255,.45)}
+.zasady div{padding:28px 0;border-bottom:1px solid rgba(255,255,255,.45)}
+.zasady p{margin-top:10px}
+@media (min-width:900px){.zasady{grid-template-columns:repeat(3,1fr)}.zasady div{padding:36px 40px 40px;border-bottom:0;border-left:1px solid rgba(255,255,255,.45)}.zasady div:first-child{border-left:0;padding-left:0}}
+.mocna .od{margin-top:clamp(32px,3vw,56px);font-size:clamp(18px,1.3vw,24px);font-weight:600;max-width:36em}
+
+/* kalendarze */
+.kal{display:grid;gap:44px;align-items:center}
+.rok{justify-self:start;padding:26px 30px;font-weight:300;font-size:clamp(84px,14vw,220px);line-height:.9;letter-spacing:-.04em;color:var(--ink);margin:16px}
+.rok::after{content:"";position:absolute;left:30px;top:-2px;width:min(46%,150px);height:clamp(10px,1.4vw,18px);background:var(--red);transform:rotate(-12deg);transform-origin:left center}
+.rok small{display:block;font-size:15px;font-weight:600;letter-spacing:0;margin-top:14px;color:var(--red)}
+.kal ul{list-style:none;margin:22px 0 0;padding:0;columns:2;column-gap:28px}
+.kal li{break-inside:avoid;padding:8px 0 8px 22px;position:relative}
+.kal li::before{content:"";position:absolute;left:0;top:.95em;width:9px;height:9px;background:var(--red)}
+.kal .tekst>p{color:var(--mut);margin-top:16px;max-width:36em}
+.kal .btn{margin-top:30px}
+@media (max-width:420px){.kal ul{columns:1}}
+@media (min-width:900px){.kal{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(48px,6vw,120px)}.rok{justify-self:center}}
+
+/* kontakt */
+.kontakt{display:grid;gap:48px}
+.dane .os{font-size:clamp(26px,2.2vw,40px);font-weight:700;line-height:1.15}
+.dane .rola{color:var(--mut);margin-top:6px}
+.dane a.duzy{display:block;width:max-content;max-width:100%;margin-top:24px;font-size:clamp(24px,2.1vw,38px);font-weight:700;text-decoration:none;border-bottom:3px solid var(--red);line-height:1.2;padding-bottom:4px}
+.dane a.mail{display:inline-block;margin-top:18px;font-weight:600;font-size:1.05em;padding:6px 0}
+.dane dl{margin:30px 0 0;display:grid;grid-template-columns:auto 1fr;gap:8px 20px;font-size:.95em}
+.dane dt{color:var(--mut)}.dane dd{margin:0}
+.dane .soc{margin-top:26px;display:flex;gap:22px;flex-wrap:wrap}
+.dane .soc a{font-weight:600;padding:8px 0;text-decoration-color:var(--red);text-underline-offset:4px}
+.form{background:#fff;padding:26px 20px 30px;--o:12px;--l:8px;margin:12px}
+.form h3{font-size:clamp(20px,1.4vw,26px)}
+.form label{display:block;margin-top:18px;font-weight:600;font-size:.92em}
+.form input,.form textarea{display:block;width:100%;margin-top:6px;padding:14px 14px;font:inherit;font-size:16px;border:1px solid #b9bec7;background:#fff;color:var(--ink);border-radius:0}
+.form textarea{min-height:130px;resize:vertical}
+.form input:focus,.form textarea:focus{outline:2px solid var(--red);outline-offset:0;border-color:var(--red)}
+.form [aria-invalid=true]{border-color:var(--red2);background:#fff5f7}
+.form .btn{margin-top:26px;width:100%}
+.form .uw{margin-top:14px;font-size:.82em;color:var(--mut)}
+.form #msg{margin-top:16px;padding:14px 16px;background:var(--g);font-weight:600}
+@media (min-width:900px){.kontakt{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(48px,6vw,120px);align-items:start}.form{padding:40px 40px 44px;margin:18px;--o:18px;--l:12px}.form .btn{width:auto}}
+.mapa{margin-top:clamp(48px,5vw,90px);height:clamp(300px,30vw,440px);background:#dfe3e8;position:relative}
+.mapa iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.35)}
+.mapa span{position:absolute;inset:0;display:grid;place-items:center;color:var(--mut);font-size:.95em}
+
+/* stopka */
+.stopka{background:var(--ink);color:#e9eaec;padding:56px 0 40px;font-size:.95em}
+.stopka .wrap{display:grid;gap:30px}
+.stopka .logo{color:#fff}.stopka .logo i{background:var(--red)}
+.stopka p{color:#c9ccd1;margin-top:8px}
+.stopka a{color:#fff}
+.stopka .dol{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 30px;align-items:center;padding-top:24px;border-top:1px solid #3a3a38;font-size:.875em;color:#c9ccd1}
+@media (min-width:900px){.stopka .wrap{grid-template-columns:1.2fr 1fr 1fr}.stopka .dol{grid-column:1/-1}}
+
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+
+
+
+/* pasek kontaktu na telefonie */
+.mob{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:#fff;border-top:1px solid var(--line);transform:translateY(100%);transition:transform .25s}
+.mob.widac{transform:none}
+.mob a{display:flex;align-items:center;justify-content:center;min-height:56px;font-weight:700;text-decoration:none;font-size:15px}
+.mob a+a{background:var(--red);color:#fff}
+@media (min-width:900px){.mob{display:none}}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(20,20,19,.94);display:none;align-items:center;justify-content:center;padding:64px 16px 90px}
+.lb.otw{display:flex}
+.lb img{max-width:min(92vw,900px);max-height:calc(100svh - 170px);width:auto;height:auto;background:#fff}
+.lb p{position:absolute;left:16px;right:16px;bottom:24px;color:#fff;text-align:center;font-size:15px}
+.lb button{position:absolute;width:52px;height:52px;border:0;background:#fff;color:var(--ink);cursor:pointer;display:grid;place-items:center}
+.lb svg{width:22px;height:22px}
+.lb .x{top:10px;right:10px}.lb .p{left:10px;top:50%;margin-top:-26px}.lb .n{right:10px;top:50%;margin-top:-26px}
+@media (max-width:640px){.lb .p,.lb .n{top:auto;bottom:70px;margin:0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="i-l" viewBox="0 0 24 24"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+ <symbol id="i-p" viewBox="0 0 24 24"><path d="m9 4 8 8-8 8" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+</svg>
+<a class="skip" href="#oferta">Przejdź do treści</a>
+
+<header class="top" id="top">
+ <div class="wrap">
+  <a class="logo" href="#start" aria-label="Projekt 33 Studio Reklamy - strona główna"><i></i><b>PROJEKT</b><strong>33</strong></a>
+  <div class="top-r">
+   <a class="tel-top mobil" href="tel:+48530066066">530 066 066</a>
+   <button class="burger" id="burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+  </div>
+  <nav class="menu" id="menu" aria-label="Menu główne">
+   <a href="#oferta">Oferta</a>
+   <a href="#realizacje">Realizacje</a>
+   <a href="#jak-pracujemy">Jak pracujemy</a>
+   <a href="#kalendarze">Kalendarze</a>
+   <a href="#kontakt">Kontakt</a>
+   <a class="btn" href="tel:+48530066066">530 066 066</a>
+  </nav>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="start">
+ <div class="mata" aria-hidden="true">
+  <div class="siatka">
+   <figure><img src="img/asanka-640.webp" width="640" height="640" alt=""></figure>
+   <figure><img src="img/natural-way-etykiety-640.webp" width="640" height="640" alt=""></figure>
+   <figure><img src="img/hertz-prezentacja-640.webp" width="640" height="640" alt=""></figure>
+   <figure><img src="img/natural-way-www-640.webp" width="640" height="640" alt=""></figure>
+   <figure><img src="img/p33-identyfikacja-640.webp" width="640" height="640" alt=""></figure>
+   <figure><img src="img/asanka-640.webp" width="640" height="640" alt=""></figure>
+   <figure><img src="img/natural-way-www-640.webp" width="640" height="640" alt="" loading="lazy"></figure>
+   <figure><img src="img/hertz-prezentacja-640.webp" width="640" height="640" alt="" loading="lazy"></figure>
+   <figure><img src="img/natural-way-etykiety-640.webp" width="640" height="640" alt="" loading="lazy"></figure>
+   <figure><img src="img/p33-identyfikacja-640.webp" width="640" height="640" alt="" loading="lazy"></figure>
+   <figure><img src="img/hertz-prezentacja-640.webp" width="640" height="640" alt="" loading="lazy"></figure>
+   <figure><img src="img/asanka-640.webp" width="640" height="640" alt="" loading="lazy"></figure>
+  </div>
+ </div>
+ <script>(function(){var m=document.currentScript.previousElementSibling,s=m.firstElementChild;function f(){var h=m.clientHeight,r=h<240?1:2;s.style.setProperty('--r',r);s.style.setProperty('--t',Math.ceil(h/r)+'px')}f();addEventListener('resize',f);if(window.ResizeObserver)new ResizeObserver(f).observe(m)})()</script>
+ <div class="arkusz-w">
+  <div class="arkusz ciecie">
+   <h1>Studio reklamy w&nbsp;Podzamczu - od pomysłu, przez projekt, po gotowy wydruk</h1>
+   <p class="lead">Logo, identyfikacja wizualna, ulotki, etykiety, prezentacje i materiały reklamowe dla firm. Cała identyfikacja czy jedna grafika -&nbsp;zrobimy ją porządnie.</p>
+   <div class="akcje">
+    <a class="btn bia" href="#kontakt">Zapytaj o projekt <span class="s" aria-hidden="true"></span></a>
+    <a class="tel" href="tel:+48530066066">tel. 530 066 066</a>
+   </div>
+   <p class="gdzie">Projekt 33 Studio Reklamy, <span style="white-space:nowrap">ul. Morusy 33,</span> <span style="white-space:nowrap">42-440 Podzamcze</span></p>
+  </div>
+ </div>
+</section>
+
+<section class="sek" id="oferta">
+ <div class="wrap">
+  <div class="glowa">
+   <h2>Grafika, druk i reklama w&nbsp;jednym miejscu</h2>
+   <p>Zaczynamy od rozmowy o Twojej firmie, a kończymy na gotowym materiale: wydrukowanym, gotowym do rozdania albo opublikowanym w sieci.</p>
+  </div>
+  <div class="oferta">
+   <article>
+    <h3>Logo i key visual</h3>
+    <p>Logo to dopiero początek. Projektujemy cały system wizualny marki: kolory, kształty, typografię, styl zdjęć i ikon, dzięki któremu każdy materiał jest od razu rozpoznawalny.</p>
+   </article>
+   <article>
+    <h3>Identyfikacja wizualna</h3>
+    <p>Komplet zasad i gotowych materiałów, z których korzystasz na co dzień.</p>
+    <p class="np">Wizytówki, papier firmowy, ulotki, oferty, prezentacje, tablice informacyjne, szablony do social mediów.</p>
+   </article>
+   <article>
+    <h3>Projekty graficzne na bieżąco</h3>
+    <p>Stałe wsparcie graficzne albo jedna pilna grafika, gdy potrzebujesz jej na jutro.</p>
+    <p class="np">Ulotki, foldery, katalogi, plakaty, vouchery, grafiki do Facebooka i Instagrama.</p>
+   </article>
+   <article>
+    <h3>Druk i materiały reklamowe</h3>
+    <p>Projekt przygotowujemy do druku i doprowadzamy do gotowego produktu. Współpracujemy ze sprawdzonymi partnerami, więc dobieramy materiał do potrzeb i budżetu.</p>
+    <p class="np">Etykiety produktów, papier firmowy, gadżety z logo, kalendarze, karnety.</p>
+   </article>
+   <article>
+    <h3>Strony www i social media</h3>
+    <p>Projekt graficzny strony, spójna oprawa profili w mediach społecznościowych i odświeżenie logo. Pomagamy też z domeną i hostingiem.</p>
+   </article>
+   <article>
+    <h3>Prezentacje i e-booki</h3>
+    <p>Prezentacje wizerunkowe, ofertowe i produktowe oraz e-booki, które pomagają sprzedawać na spotkaniu i w sieci.</p>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="sek sz" id="realizacje">
+ <div class="wrap">
+  <div class="glowa">
+   <h2>Wybrane realizacje</h2>
+   <p>Od etykiet kosmetyków po pełną identyfikację marki. Kliknij projekt, żeby go powiększyć.</p>
+  </div>
+  <div class="tor" id="tor" data-tor data-grupa>
+   <figure><button type="button" data-lb="img/asanka-640.webp"><img src="img/asanka-400.webp" srcset="img/asanka-400.webp 400w, img/asanka-640.webp 640w" sizes="(min-width:900px) 23vw, 78vw" width="640" height="640" loading="lazy" alt="Identyfikacja Asanka Mind Quest: papier firmowy, wizytówka, voucher, kubek i długopis z logo"></button>
+    <figcaption><b>Asanka Mind Quest</b><span>Logo, papier firmowy, wizytówki, vouchery, ulotki i gadżety.</span></figcaption></figure>
+   <figure><button type="button" data-lb="img/natural-way-etykiety-640.webp"><img src="img/natural-way-etykiety-400.webp" srcset="img/natural-way-etykiety-400.webp 400w, img/natural-way-etykiety-640.webp 640w" sizes="(min-width:900px) 23vw, 78vw" width="640" height="640" loading="lazy" alt="Etykiety kosmetyków Natural Way na słoiczkach i butelkach"></button>
+    <figcaption><b>Natural Way</b><span>Rebranding marki kosmetycznej, logo i etykiety produktów.</span></figcaption></figure>
+   <figure><button type="button" data-lb="img/natural-way-www-640.webp"><img src="img/natural-way-www-400.webp" srcset="img/natural-way-www-400.webp 400w, img/natural-way-www-640.webp 640w" sizes="(min-width:900px) 23vw, 78vw" width="640" height="640" loading="lazy" alt="Projekt strony internetowej Natural Way na laptopie"></button>
+    <figcaption><b>Natural Way - strona www</b><span>Projekt graficzny strony, oprawa social mediów, odświeżenie logo.</span></figcaption></figure>
+   <figure><button type="button" data-lb="img/hertz-prezentacja-640.webp"><img src="img/hertz-prezentacja-400.webp" srcset="img/hertz-prezentacja-400.webp 400w, img/hertz-prezentacja-640.webp 640w" sizes="(min-width:900px) 23vw, 78vw" width="640" height="640" loading="lazy" alt="Slajdy prezentacji ofertowej Hertz New Technologies"></button>
+    <figcaption><b>Hertz New Technologies</b><span>Prezentacja ofertowa i produktowa.</span></figcaption></figure>
+   <figure><button type="button" data-lb="img/p33-identyfikacja-640.webp"><img src="img/p33-identyfikacja-400.webp" srcset="img/p33-identyfikacja-400.webp 400w, img/p33-identyfikacja-640.webp 640w" sizes="(min-width:900px) 23vw, 78vw" width="640" height="640" loading="lazy" alt="Identyfikacja wizualna Projekt 33: wizytówki, papier firmowy, voucher"></button>
+    <figcaption><b>Projekt 33</b><span>Nasza własna identyfikacja: znak, wizytówki, papier, vouchery.</span></figcaption></figure>
+  </div>
+  <div class="nav-tor" data-nav="tor"><button type="button" data-k="-1" aria-label="Poprzednie realizacje"><svg aria-hidden="true"><use href="#i-l"/></svg></button><button type="button" data-k="1" aria-label="Następne realizacje"><svg aria-hidden="true"><use href="#i-p"/></svg></button></div>
+ </div>
+</section>
+
+<section class="sek mocna" id="jak-pracujemy">
+ <div class="wrap">
+  <div class="glowa">
+   <h2>Od pomysłu, przez kreację, po&nbsp;realizację</h2>
+   <p>Każdy projekt traktujemy indywidualnie, bo ma oddać osobowość Twojego biznesu, a nie wyglądać jak sto innych.</p>
+  </div>
+  <div class="zasady">
+   <div><h3>Pasja poparta warsztatem</h3><p>Projektowanie graficzne to nasza pasja, a za nią stoi wykształcenie plastyczne i doświadczenie. Śledzimy trendy, ale projektujemy tak, żeby znak bronił się latami.</p></div>
+   <div><h3>Najpierw słuchamy</h3><p>Pracę zaczynamy od poznania Twoich potrzeb, oczekiwań i wyobrażeń. Dbamy o dobrą relację, bo od niej zależy, czy projekt naprawdę będzie Twój.</p></div>
+   <div><h3>Wszystko w jednym miejscu</h3><p>Projekt, przygotowanie do druku i gotowy produkt. Sprawdzeni partnerzy pozwalają dobrać najlepsze materiały reklamowe dla Twojej marki.</p></div>
+  </div>
+  <p class="od">Studio działa od 2010 roku w Podzamczu, w gminie Ogrodzieniec.</p>
+ </div>
+</section>
+
+<section class="sek" id="kalendarze">
+ <div class="wrap kal">
+  <div class="rok ciecie" aria-hidden="true">2027<small>kalendarze z Twoim logo</small></div>
+  <div class="tekst">
+   <h2>Kalendarze firmowe i karnety świąteczne</h2>
+   <p>Prowadzimy katalog kalendarzy online. Wybierasz model, a my przygotowujemy go z Twoim logo i reklamą, gotowy do rozdania klientom.</p>
+   <ul>
+    <li>kalendarze książkowe</li>
+    <li>kalendarze wielodzielne</li>
+    <li>kalendarze plakatowe</li>
+    <li>kalendarze wieloplanszowe</li>
+    <li>kalendarze biurkowe</li>
+    <li>planery ścienne</li>
+    <li>karnety na Boże Narodzenie i Wielkanoc</li>
+    <li>linia ECO i notesy</li>
+   </ul>
+   <a class="btn" href="https://projekt33.ekalendarze.eu/" rel="noopener" target="_blank">Otwórz katalog kalendarzy <span class="s" aria-hidden="true"></span></a>
+  </div>
+ </div>
+</section>
+
+<section class="sek sz" id="kontakt">
+ <div class="wrap">
+  <div class="kontakt">
+   <div class="dane">
+    <h2 class="os">Napisz albo zadzwoń - Anna Kula</h2>
+    <p class="rola">Projekt 33 Studio Reklamy</p>
+    <a class="duzy" href="tel:+48530066066">530 066 066</a>
+    <a class="mail" href="mailto:biuro@projekt33.pl">biuro@projekt33.pl</a>
+    <dl>
+     <dt>Adres</dt><dd>ul. Morusy 33, 42-440 Podzamcze</dd>
+     <dt>Gmina</dt><dd>Ogrodzieniec, powiat zawierciański</dd>
+     <dt>NIP</dt><dd>649 211 51 94</dd>
+    </dl>
+    <div class="soc"><a href="https://www.facebook.com/projekt33.reklama" rel="noopener" target="_blank">Facebook</a><a href="https://www.instagram.com/projekt_33_studio_reklamy/" rel="noopener" target="_blank">Instagram</a></div>
+   </div>
+   <form class="form ciecie" id="form" novalidate>
+    <h3>Opisz, czego potrzebujesz</h3>
+    <label for="f-imie">Imię i nazwa firmy</label>
+    <input id="f-imie" name="imie" autocomplete="name" required>
+    <label for="f-kontakt">Telefon lub e-mail</label>
+    <input id="f-kontakt" name="kontakt" autocomplete="email" required>
+    <label for="f-opis">Wiadomość</label>
+    <textarea id="f-opis" name="opis" placeholder="np. logo i wizytówki dla nowej firmy, 500 ulotek A5, kalendarze z logo na 2027" required></textarea>
+    <button class="btn" type="submit">Wyślij zapytanie <span class="s" aria-hidden="true"></span></button>
+    <p class="uw">Odpowiadamy z wyceną i propozycją terminu.</p>
+    <p id="msg" hidden>To podgląd strony - formularz zacznie działać na docelowej wersji.</p>
+   </form>
+  </div>
+  <div class="mapa" id="mapa" data-src="https://www.google.com/maps?q=Projekt+33+Studio+Reklamy,+Morusy+33,+42-440+Podzamcze&amp;output=embed" data-t="Mapa: Projekt 33, ul. Morusy 33, Podzamcze"><span>Mapa dojazdu: ul. Morusy 33, Podzamcze</span></div>
+ </div>
+</section>
+</main>
+
+<footer class="stopka">
+ <div class="wrap">
+  <div><a class="logo" href="#start" aria-label="Projekt 33 - do góry"><i></i><b>PROJEKT</b><strong>33</strong></a><p>Studio reklamy: grafika, druk, reklama.</p></div>
+  <div><p>ul. Morusy 33<br>42-440 Podzamcze<br>NIP 649 211 51 94</p></div>
+  <div><p><a href="tel:+48530066066">530 066 066</a><br><a href="mailto:biuro@projekt33.pl">biuro@projekt33.pl</a></p></div>
+  <div class="dol"><span>© <span id="rok">2026</span> Projekt 33 Studio Reklamy</span><a class="wylinka-badge" href="https://wylinka.pl/?utm_source=projekt33.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
+</div>
+ </div>
+</footer>
+
+<nav class="mob" id="mob" aria-label="Szybki kontakt"><a href="tel:+48530066066">Zadzwoń</a><a href="#kontakt">Zapytaj o projekt</a></nav>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększony projekt">
+ <button class="x" type="button" aria-label="Zamknij"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19" stroke="currentColor" stroke-width="2.2"/></svg></button>
+ <button class="p" type="button" aria-label="Poprzedni"><svg aria-hidden="true"><use href="#i-l"/></svg></button>
+ <img alt="">
+ <button class="n" type="button" aria-label="Następny"><svg aria-hidden="true"><use href="#i-p"/></svg></button>
+ <p></p>
+</div>
+<script src="app.js" defer></script>
+</body>
+</html>
